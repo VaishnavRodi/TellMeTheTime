@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+
+*,::before,::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    transition: all .2s ease-in-out;
+    background-image: url(nasa-Q1p7bh3SHj8-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+
+.container
+{
+    position:absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    text-align: center;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.container .search_bar
+{
+  width: 50%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width : 700px){
+    .container{
+      width: 100%;
+     
+    }
+    .container .search_bar{
+      width: 60%;
+    }
+    .container .results-container 
+    {
+        width: 60%;
+    }
+}
+.container .search_bar input 
+{
+  width: 85%;
+  height: 100%;
+  outline: none;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: transparent;
+  color: #FFFFFF;
+  border: none;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+.container .search_bar button 
+{
+    outline: none;
+    height: 100%;
+    display: inline-block;
+    padding: 0 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    border: none;
+    transition: .2s ease-in-out;
+}
+
+.container .search_bar button:active
+{
+    transform: scale(.9);
+}
+
+.container .results-container 
+{
+    width: 50%;
+    border-radius:4px;
+    margin: 10px auto 0;
+    background-color:rgba(19, 21, 44,.8);
+}
+
+@media screen and (max-width : 700px){
+  
+    .container .results-container 
+    {
+        width: 60%;
+    }
+}
+
+.results-container .error
+{
+    padding: 10px;
+    color: #e21c1c;
+    text-align: center;
+}
+.container .results-container .time 
+{
+    width: 80%;
+    margin: 0 auto 0;
+
+}
+
+.results-container .time span 
+{
+    display: inline-block;
+    margin: 5px;
+    font-size: 2em;
+  background-color: #FFFFFF;
+  color: #252525;
+  padding: 10px;
+ 
+}
+
+@media screen and (max-width : 888px){
+    .results-container .time span{
+        font-size: 1em;
+        padding: 5px;
+    }
+}
+
+.results-container .zone-results 
+{
+    width: 100%;
+    text-align: center;
+}
+
+.results-container .zone-results .card 
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 1em;
+    color: #FFFFFF;
+    text-transform: capitalize;
+}
+
